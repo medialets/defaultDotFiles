@@ -39,7 +39,9 @@ alias yum="sudo yum"
 alias chef-client="sudo chef-client"
 
 # Fix to get screen to auto name window to hostname in CAPS
-PROMPT_COMMAND=''`which echo`' -ne "\033k\033\134\033k`echo ${HOSTNAME} | tr [:lower:] [:upper:]`\033\134"'
+if [ "$TERM" == "screen" ]; then
+    PROMPT_COMMAND=''`which echo`' -ne "\033k\033\134\033k`echo ${HOSTNAME} | tr [:lower:] [:upper:]`\033\134"'
+fi
 
 # Commands/Functions
 function create-knownhosts () {

@@ -1,0 +1,42 @@
+# GNU Screen - main configuration file 
+# All other .screenrc files will source this file to inherit settings.
+# Author: Christian Wills - cwills.sys@gmail.com
+
+# Allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# Tell screen how to set colors. AB = background, AF=foreground
+# termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Enables use of shift-PgUp and shift-PgDn
+#termcapinfo xterm|xterm-256color|xterms|xs|rxvt ti@:te@
+termcapinfo xterm-256color ti@:te@
+
+# Erase background with current bg color
+defbce "on"
+
+# keep display correct in vi
+altscreen on
+
+# Enable 256 color term
+term xterm-256color
+
+# set shell title dynamicly (to what PROMPT_COMMAND is in .bashrc)
+#shelltitle '> |bash'
+
+# Cache 30000 lines for scroll back
+defscrollback 30000
+
+######################
+###   HARD STATUS  ###
+######################
+#hardstatus on
+#hardstatus alwayslastline 
+## Very nice tabbed colored hardstatus line
+#hardstatus string '%{= Kd} %{= Kd}%-w %{KG}%H %{= Kr}[%{= KW} %n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+## change command character from ctrl-a to ctrl-b (emacs users may want this)
+#escape ^Bb
+## Hide hardstatus: ctrl-a f 
+#bind f eval "hardstatus ignore"
+## Show hardstatus: ctrl-a F
+#bind F eval "hardstatus alwayslastline"

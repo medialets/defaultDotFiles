@@ -10,13 +10,13 @@ fi
 
 COLOR_ENV=''
 COLO_DIR=''
-if [ "$ENV" == "stg" ]; then
+if [[ "$ENV" =~ "stg.medialets" ]]; then
     ENV="${COLOR_DIR}[${COLOR_ENV} STAGING ${COLOR_DIR}]"
-elif [ "$ENV" == "qa" ] ;then
+elif [[ "$ENV" =~ "qa" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} QA ${COLOR_DIR}]"
-elif [ "$ENV" == "dev" ] ;then
+elif [[ "$ENV" =~ "dev" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} DEV ${COLOR_DIR}]"
-elif [ "$ENV" == "site3" ] ;then
+elif [[ "$ENV" =~ "site3" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} PRODUCTION ${COLOR_DIR}]"
 else
     ENV="${COLOR_DIR}[${COLOR_ENV} PROD_EC2 ${COLOR_DIR}]"

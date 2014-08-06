@@ -18,9 +18,9 @@ elif [[ "$ENV" =~ "dev" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} DEV ${COLOR_DIR}]"
 elif [[ "$ENV" =~ "site3" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} SITE3 ${COLOR_DIR}]"
-elif [[ "$ENV" =~ "site=4" ]] ;then
+elif [[ "$ENV" =~ "site4" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} SITE4 ${COLOR_DIR}]"
-elif [[ "$ENV" =~ "site=1" ]] ;then
+elif [[ "$ENV" =~ "site1" ]] ;then
     ENV="${COLOR_DIR}[${COLOR_ENV} SITE1 ${COLOR_DIR}]"
 else
     ENV="${COLOR_DIR}[${COLOR_ENV} U_NEW_HERE ${COLOR_DIR}]"
